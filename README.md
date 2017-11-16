@@ -1,7 +1,11 @@
 # alpine-appengine-java
-Minimal Java/Maven Docker Images built on Google CloudSDK Alpine Linux
+AppEngine Java Docker Images built on Google CloudSDK Alpine Linux
 
-#Default command
+### Usage
+
+Start using your devserver: `docker run -it -v ~/.m2:/root/.m2 -v $(pwd):/usr/src/app -w /usr/src/app -p 8080:8080 zenika/alpine-appengine-java`
+
+### Default command
 
 ```
 mvn -Dapp.devserver.host="0.0.0.0" appengine:run
@@ -9,7 +13,7 @@ mvn -Dapp.devserver.host="0.0.0.0" appengine:run
 
 The parameter `app.devserver.host` to `0.0.0.0` allow us to ping our devserver from the container. It's an equivalent to `<host>0.0.0.0</host>` in the `configuration` section of our beloved `pom.xml`
 
-# Java version
+### Java version
 
 ```
 docker run --rm zenika/alpine-appengine-java java -version
@@ -18,7 +22,7 @@ OpenJDK Runtime Environment (IcedTea 3.3.0) (Alpine 8.121.13-r0)
 OpenJDK 64-Bit Server VM (build 25.121-b13, mixed mode)
 ```
 
-# Maven version
+### Maven version
 
 ```
 docker run --rm zenika/alpine-appengine-java mvn -v
