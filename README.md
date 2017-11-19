@@ -15,7 +15,7 @@ The parameter `app.devserver.host` to `0.0.0.0` allow us to ping our devserver f
 
 ### Deploy commands
 
-Start a bash using `docker run --rm -it -v ~/.m2:/root/.m2 -v $(pwd):/usr/src/app -v $HOME/.config/gcloud:/root/.config/gcloud -w /usr/src/app -p 8080:8080 zenika/alpine-appengine-java bash`
+Start a bash using `docker run --rm -it -v ~/.m2:/root/.m2 -v $(pwd):/usr/src/app -v ~/.config/gcloud:/root/.config/gcloud -w /usr/src/app -p 8080:8080 zenika/alpine-appengine-java bash`
 
 We mount `.config/gcloud` to save the credentials.
 
