@@ -13,6 +13,20 @@ mvn -Dapp.devserver.host="0.0.0.0" appengine:run
 
 The parameter `app.devserver.host` to `0.0.0.0` allow us to ping our devserver from the container. It's an equivalent to `<host>0.0.0.0</host>` in the `configuration` section of our beloved `pom.xml`
 
+### Deploy commands
+
+Start a bash using `docker run --rm -it -v ~/.m2:/root/.m2 -v $(pwd):/usr/src/app -v $HOME/.config/gcloud:/root/.config/gcloud -w /usr/src/app -p 8080:8080 zenika/alpine-appengine-java bash`
+
+We mount `.config/gcloud` to save the credentials.
+
+Then use the following command:
+```
+gcloud auth login
+#copy paste the url in your browser and then paste the token in your bash
+gcloud config set project imt-2017-11
+mvn -Dapp.deploy.version=v0 appengine:deploy
+```
+
 ### Java version
 
 ```
