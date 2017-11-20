@@ -24,6 +24,7 @@ Then use the following command:
 gcloud auth login
 #copy paste the url in your browser and then paste the token in your bash
 gcloud config set project imt-2017-11
+gcloud config set app/promote_by_default false
 mvn -Dapp.deploy.version=v0 appengine:deploy
 ```
 
