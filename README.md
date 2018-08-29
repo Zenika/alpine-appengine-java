@@ -49,19 +49,18 @@ docker run --rm -it -h localhost -v ~/.m2:/root/.m2 -v $(pwd):/usr/src/app -v /.
 
 ```
 docker run --rm zenika/alpine-appengine-java java -version
-openjdk version "1.8.0_121"
-OpenJDK Runtime Environment (IcedTea 3.3.0) (Alpine 8.121.13-r0)
-OpenJDK 64-Bit Server VM (build 25.121-b13, mixed mode)
+openjdk version "1.8.0_171"
+OpenJDK Runtime Environment (IcedTea 3.8.0) (Alpine 8.171.11-r0)
+OpenJDK 64-Bit Server VM (build 25.171-b11, mixed mode)
 ```
 
 ### Maven version
 
 ```
 docker run --rm zenika/alpine-appengine-java mvn -v
-Apache Maven 3.5.2 (138edd61fd100ec658bfa2d307c43b76940a5d7d; 2017-10-18T07:58:13Z)
-Maven home: /usr/share/maven
-Java version: 1.8.0_121, vendor: Oracle Corporation
-Java home: /usr/lib/jvm/java-1.8-openjdk/jre
+Apache Maven 3.5.4 (1edded0938998edf8bf061f1ceb3cfdeccf443fe; 2018-06-17T18:33:14Z)
+Maven home: /usr/lib/mvn
+Java version: 1.8.0_111-internal, vendor: Oracle Corporation, runtime: /usr/lib/jvm/java-1.8-openjdk/jre
 Default locale: en_US, platform encoding: UTF-8
-OS name: "linux", version: "4.9.49-moby", arch: "amd64", family: "unix"
+OS name: "linux", version: "4.9.93-linuxkit-aufs", arch: "amd64", family:"unix"
 ```
