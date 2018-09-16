@@ -1,3 +1,5 @@
+[![Docker Build Status](https://img.shields.io/docker/build/zenika/alpine-appengine-java.svg)](https://hub.docker.com/r/zenika/alpine-appengine-java/) [![Docker Pulls](https://img.shields.io/docker/pulls/zenika/alpine-appengine-java.svg)](https://hub.docker.com/r/zenika/alpine-appengine-java/)
+
 # alpine-appengine-java
 AppEngine Java Docker Images built on Google CloudSDK Alpine Linux
 
