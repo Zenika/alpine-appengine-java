@@ -1,6 +1,10 @@
 FROM google/cloud-sdk:alpine
 
-RUN apk add --update --no-cache openjdk8 curl tar bash
+RUN apk add --update --no-cache openjdk8 curl tar bash \
+	&& rm -rf /var/lib/apt/lists/* \
+    /var/cache/apk/* \
+    /usr/share/man \
+    /tmp/*
 
 ARG MAVEN_VERSION=3.5.4
 ARG USER_HOME_DIR="/root"
