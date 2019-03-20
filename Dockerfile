@@ -1,6 +1,6 @@
 FROM google/cloud-sdk:alpine
 
-RUN apk add --update --no-cache openjdk8 curl tar bash \
+RUN apk add --update --no-cache openjdk8 curl tar bash nss \
 	&& rm -rf /var/lib/apt/lists/* \
     /var/cache/apk/* \
     /usr/share/man \
